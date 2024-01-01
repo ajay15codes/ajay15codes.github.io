@@ -1,62 +1,128 @@
-#wrapper{
-    padding: 0%;
-    width: 900px;
-    /* height: 2000px; */
-    /* background-color: blueviolet; */
-    margin: 0 auto;
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@600&family=Agbalumo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
 
-#header{
-    height: 60px;
-    width: 900px;
-    /* background-color: aqua; */
-    margin-bottom: 20px;
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Asap;
+  font-weight: 600;
+  background-color: #adc178;
 }
 
-#small{
-    height: 60px;
-    width: 190px;
-    background-color: grey;
-    float: left;
-}
-#large{
-    height: 60px;
-    width: 700px;
-    background-color: grey;
-    float: right;
+button {
+  cursor: pointer;
 }
 
-#banner{
-    height: 200px;
-    width: 900px;
-    background-color: grey;
-    margin-bottom: 20px;
+body,
+.stopwatch,
+.time-box,
+.buttons,
+.hours,
+.minutes,
+.seconds,
+.miliseconds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#one{
-    width: 440px;
-    height: 400px;
-    background-color: gray;
-    float: left;
+body {
+  flex-direction: column;
+  gap: 20px;
 }
 
-#two{
-    width: 440px;
-    height: 400px;
-    float: right;
-    background-color: grey;
+.container {
+  width: 300px;
+  height: 300px;
 }
 
-#post{
-    height: 400px;
-    width: 900px;
-    margin-bottom: 20px;
-    /* background-color: brown; */
+.stopwatch {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  gap: 40px;
+  backdrop-filter: blur(5px);
+  background-color: #e3edd7;
 }
 
-#footer{
-    width: 900px;
-    height: 200px;
-    background-color: gray;
-    margin-bottom: 20px;
+.title {
+  color: #4e4e4e;
+  font-family: Agbalumo;
+  font-size: 18px;
+}
+
+.time-box {
+  width: 85%;
+  height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  background-color: #cfe1b9;
+  font-size: 20px;
+  font-weight: 800;
+  color: #434343;
+  gap: 7px;
+}
+
+.buttons {
+  gap: 20px;
+  position: relative;
+}
+
+.btn {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  padding: 5px;
+}
+
+#start-button {
+  background-color: #196e19;
+  transition: all 0.3s linear;
+  color: #fff;
+}
+
+#reset-button {
+  transition: all 0.3s linear;
+}
+
+#start-button:active,
+#reset-button:active {
+  scale: 0.9;
+}
+
+.hours,
+.minutes,
+.seconds,
+.miliseconds {
+  border: 1px solid #000;
+  min-width: 45px;
+  height: 32px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate360 0.35s linear;
 }
