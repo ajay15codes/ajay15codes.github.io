@@ -1,49 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stop Watch</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="stopwatch">
-        <div class="title">
-          <h1>Stop`Watch</h1>
-        </div>
-        <div class="time-box">
-            <div class="hours">00</div>
-            :
-            <div class="minutes">00</div>
-            :
-            <div class="seconds">00</div>
-            :
-            <div class="miliseconds">00</div>
-        </div>
-        <div class="buttons">
-          <button type="button" class="btn" id="start-button">
-            <i class="fa-solid fa-play"></i>
-          </button>
-          <button
-            type="button"
-            class="btn"
-            id="reset-button"
-            onclick="resetTimer()"
-          >
-            <i class="fa-solid fa-arrow-rotate-right" id="reset-icon"></i>
-          </button>
-        </div>
-      </div>
-    </div>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Shop Registration Form</title>
 
-    <script src="script.js"></script>
-  </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<section class="container">
+		<header>
+			Shop Registration Form
+			<p>(All Fields are Mandatory)</p>
+		</header>
+		<form onsubmit="return Validate()" action="Validation" method="post"
+			class="form">
+
+			<div class="column">
+				<div class="input-box">
+					<label for="firstName">First Name</label> <input type="text"
+						id="firstName" name="firstName" placeholder="Enter First Name"
+						required />
+				</div>
+				<div class="input-box">
+					<label>Last Name</label> <input type="text" id="lastName"
+						name="lastName" placeholder="Enter Last Name" required />
+				</div>
+			</div>
+
+			<div class="input-box">
+				<label>Shop Name</label> <input type="text" id="shopName"
+					name="shopName" placeholder="Enter Shop Name" required />
+			</div>
+			<a href="Validation">Click Here</a>
+			<div class="input-box">
+				<label>Email Address</label> <input type="text" name="emailAddress"
+					id="emailAddress" placeholder="Enter email address" required />
+			</div>
+
+			<div class="column">
+
+				<div class="input-box">
+					<label>Phone Number</label> <input type="text" name="phoneNumber"
+						id="phoneNumber" placeholder="Enter phone number" required />
+				</div>
+
+				<div class="input-box">
+					<label>Birth Date</label> <input type="date" name="dateOfBirth"
+						id="DOB" placeholder="Enter birth date" required />
+				</div>
+
+			</div>
+
+			<div class="gender-box">
+
+				<h3>Gender</h3>
+
+				<div class="gender-option">
+
+					<div class="gender">
+						<input type="radio" id="check-male" name="gender" value="Male"
+							required /> <label for="check-male">Male</label>
+					</div>
+
+					<div class="gender">
+						<input type="radio" id="check-female" name="gender" value="Female"
+							required /> <label for="check-female">Female</label>
+					</div>
+
+
+				</div>
+
+			</div>
+
+			<div class="input-box address">
+
+				<label>Address</label> <input type="text" name="address1"
+					placeholder="Locality/Street/Building Name" required /> <input
+					type="text" name="address2" placeholder="Landmark" required />
+
+				<div class="column">
+					<div class="select-box">
+						<select name="countryName" required>
+							<option hidden>Country</option>
+							<option>India</option>
+						</select>
+					</div>
+					<input type="text" name="cityName" placeholder="Enter your city"
+						required />
+				</div>
+				<div class="column">
+					<input type="text" name="stateName" placeholder="Enter Your State"
+						required /> <input type="number" name="pinCode"
+						placeholder="Enter Pin Code" required />
+				</div>
+
+			</div>
+
+			<div class="input-box">
+				<label>Password</label> <input type="password" name="password"
+					id="password" placeholder="Enter Your Password" required />
+			</div>
+
+			<div class="input-box">
+				<label>Confirm Password</label> <input type="password"
+					id="confirmPassword" name="confirmPassword"
+					placeholder="Confirm Your Password" required />
+			</div>
+				<input id="button" type="submit" value="submit">
+		</form>
+	</section>
+
+
+  <script>
+  function Validate(){
+	
+  console.log("hello");
+	var firstName = document.querySelector("#firstName").value;
+    console.log(firstName);
+	var lastName = document.querySelector("#lastName").value;
+    console.log(lastName);
+	var shopName = document.querySelector("#shopName").value;
+    console.log(shopName);
+	var emailAddress = document.querySelector("#emailAddress").value;
+    console.log(emailAddress);
+	var phoneNumber = document.querySelector("#phoneNumber").value;
+    console.log(phoneNumber);
+    var emailRegEx = /^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-z]{2,3}$/;
+	var phoneRegEx = /^[0-9]{10}$/;
+    var password = document.querySelector("#password").value;
+    var cnfpassword = document.querySelector("#confirmPassword").value;
+
+	if(firstName.trim()=="" || lastName.trim()==""){
+		swal("Oh-Oh!!!", "Name must be atleast 3 characters long!", "error");
+		return false;
+	}
+	else if(shopName=""){
+		swal("Oh-Oh!!!", "ShopName must be atleast 3 characters long!", "error");
+		return false;
+	}
+	else if(!emailRegEx.test(emailAddress)){
+    swal("Oh-Oh!!!", "Invalid Email", "error");
+    return false;
+    }
+    else if(!phoneRegEx.test(phoneNumber)){
+        swal("Oh-Oh!!!", "Invalid Mobile Number", "error");
+        return false;
+        }
+	 if(password!=cnfpassword){
+	        swal("Please Try Again", "Passwords Do Not Match!!!", "error");
+	        return false;
+	    }
+   return true; 
+	
+}
+  </script>
+</body>
 </html>
