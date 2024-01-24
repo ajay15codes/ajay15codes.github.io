@@ -13,6 +13,9 @@
 <body>
 	<section class="container">
 		<header>
+		<nav>
+				<img src="light_mode_FILL0_wght400_GRAD0_opsz24.png" alt="" id="icon">
+			</nav>
 			Shop Registration Form
 			<p>(All Fields are Mandatory)</p>
 		</header>
@@ -35,7 +38,6 @@
 				<label>Shop Name</label> <input type="text" id="shopName"
 					name="shopName" placeholder="Enter Shop Name" required />
 			</div>
-			<a href="Validation">Click Here</a>
 			<div class="input-box">
 				<label>Email Address</label> <input type="text" name="emailAddress"
 					id="emailAddress" placeholder="Enter email address" required />
@@ -48,10 +50,7 @@
 						id="phoneNumber" placeholder="Enter phone number" required />
 				</div>
 
-				<div class="input-box">
-					<label>Birth Date</label> <input type="date" name="dateOfBirth"
-						id="DOB" placeholder="Enter birth date" required />
-				</div>
+				
 
 			</div>
 
@@ -85,7 +84,7 @@
 				<div class="column">
 					<div class="select-box">
 						<select name="countryName" required>
-							<option hidden>Country</option>
+							<option>Country</option>
 							<option>India</option>
 						</select>
 					</div>
@@ -110,12 +109,22 @@
 					id="confirmPassword" name="confirmPassword"
 					placeholder="Confirm Your Password" required />
 			</div>
-				<input id="button" type="submit" value="submit">
+				<input id="button" type="submit" value="Submit">
 		</form>
 	</section>
 
 
   <script>
+  
+  var icon = document.getElementById("icon");
+	icon.onclick = function(){
+		document.body.classList.toggle("dark-theme");
+		if(document.body.classList.contains("dark-theme"))
+		icon.src = "brightness.png" ;
+		else	
+			icon.src="light_mode_FILL0_wght400_GRAD0_opsz24.png";
+	}
+  
   function Validate(){
 	
   console.log("hello");
