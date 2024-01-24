@@ -1,6 +1,5 @@
 @import
-	url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap")
-	;
+	url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@1,8..144,500&display=swap');
 
 * {
 	margin: 0;
@@ -8,6 +7,26 @@
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 	user-select: none;
+	transition: all 0.25s linear;
+}
+
+:root{
+	--primary-color:rgb(254, 247, 255);
+	--secondary-color:rgb(243, 237, 247);
+	--font-color:#333;
+
+}
+.dark-theme{
+	--primary-color:rgb(15, 13, 19);
+	--secondary-color:black;
+	--font-color:rgb(227, 227, 227);
+}
+.dark-theme .input-box input {
+	border: none;
+}
+
+.dark-theme .input-box input:focus{
+	box-shadow: inset 0 0 8px rgba(0, 0, 0);
 }
 
 body {
@@ -16,9 +35,13 @@ body {
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
-	background: rgb(130, 106, 251);
+	background: var(--secondary-color);
 }
-
+#icon{
+	cursor:pointer;
+	margin-left: 95%;
+	width: 30px;
+}
 p {
 	font-size: small;
 	justify-content: center;
@@ -29,7 +52,7 @@ p {
 	position: relative;
 	max-width: 700px;
 	width: 100%;
-	background: #fff;
+	background:var(--primary-color);
 	padding: 25px;
 	border-radius: 8px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -37,9 +60,10 @@ p {
 
 .container header {
 	font-size: 1.5rem;
-	color: #333;
+	color: var(--font-color);
 	font-weight: 500;
 	text-align: center;
+	text-shadow:  0 5px 8px rgba(0, 0, 0, 0.375);
 }
 
 .container .form {
@@ -52,7 +76,7 @@ p {
 }
 
 .input-box label {
-	color: #333;
+	color: var(--font-color);
 }
 
 .form :where(.input-box input, .select-box) {
@@ -61,6 +85,7 @@ p {
 	width: 100%;
 	outline: none;
 	font-size: 1rem;
+	background-color:#fff;
 	color: #707070;
 	margin-top: 8px;
 	border: 1px solid #ddd;
@@ -69,7 +94,7 @@ p {
 }
 
 .input-box input:focus {
-	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.821);
 }
 
 .form .column {
@@ -82,7 +107,7 @@ p {
 }
 
 .gender-box h3 {
-	color: #333;
+	color: var(--font-color);
 	font-size: 1rem;
 	font-weight: 400;
 	margin-bottom: 8px;
