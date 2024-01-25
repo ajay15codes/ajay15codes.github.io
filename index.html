@@ -7,50 +7,54 @@
 <title>Shop Registration Form</title>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 	<section class="container">
+		
 		<header>
-		<nav>
-				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALEAAACUCAMAAADrljhyAAAAY1BMVEX///8AAAD19fXw8PD8/Pz5+fmUlJTQ0NDAwMCFhYUxMTFPT0/n5+fq6uqpqaldXV0oKChjY2Pc3NxxcXE2NjYYGBh8fHydnZ24uLixsbHKyspra2tDQ0M9PT0iIiJISEgMDAzenvSVAAAEkUlEQVR4nO2cbbOqIBCAwze0TA3NSiv7/7/ynrJOJ1NhF3SZuT7fm55xFliWhdVqYWFhYWFh4b/Ad9xtzMPjKXSpVRTY8vAU1QVraWJqHwkiidKXbEtErTSGiM7ZjXWoPWqtAZw4yLqyDxJqs37cU/n1cZ9B4VO79eEnab+urcLJfsiXBRYGsXu8DPqyA7VdD2E97GvjxOZE1xHh3KH2+6IaCQjGdtYt0O5hzJetBbVgFzEWwT8cqQW7VP0r3DsmqAU7eMm4L1tvqRU/cQKJMDtRK3YoZcKpZfPEYBZh6Sd2dlLhhtrxA0caEoyF1JIfKAjvrUoxpbMEsyxlOykI721an2Ur3YPcoqnNPSsIWxUU8on4h6yi1nwjSyZaNvYEBVcJYpuyNidXErZod6cWE4xZE8axWkwwZs1srLA6t1CLvhCqwtYYS/ahb/bUpk/C4dpahwu1aouvHMVsQ+3aUikLs5TatUX9E1vyjbfqwpbE8XiF7RM75grlieIOteydcOBUxl5jwLhjVuQV8QZkbEGx4ggKChvyY8hMwWzYg7hK+9E39Ps8AZrbGLuSB3IIE7agXhFBjWvqsFCqA/2FvO4GFSYPixhunNGe+IMHHqNe9oDrxwPaHFl5E/0X0rMmWBr0hPQ8Dzy5UX9kZ7SHYpCMbk7eFnK9PnIy4xhpTNdfgTYuqOIiXiONWarbYsGvqFwbb8xyvcPeR+UshS/4GsZ6Oz7++OM1vH1Zx5gFeGHRHmIgjLGz21MZGxivI4ECbuxqGWN7Y6tXr2IBH3oebs37pcYon36bKy+Inzd6xqzh4L/8UzU7w4XVTs/HuCWwjlP+N1vEVPzBW+lvcsBndj7b8UuE8VHfmGXKvd5VJx3H3BtQP3ocJVEY9A7/2j7AB8EKs/vvpUgkqVHc1y+OaroGlt1GnKPjcHLEg94hjhHGbU372a/rU4+0X5VNf2cB7nBQpWEMRH0IhRDxHSF4Uo5kLrgLO4aGXof9+nwupC0bqIG3ijXXaQ0Qmdsd38AagqREpn7GA1kZ7L0zThUWBS6MV0bnNxA79EYRU940Ab5y7hpb9kDsNcoH8s75KdDphuEkxjrNiR6qiKzJWes0xURaD0WvBA1sWDCB7mX2+Sc43UNBd+6P3GhfPps7uTBwlV21/dgMV33hmedkE43iHqwjSw/NYvkTMV/SaeoMRbX1Xx9j7Q5z5cnmurncsTvz5rgavAeM6bWAY7Q7Q+U+oS4axz09zFAJKA2/yDB5frExfpld63xPzhSdZ0LvuGycadoy+HTKGbqkIlGerBgwkfBPYMBaqOmFJ9r2NZO2kAjFG5wA6ol7XlzT2fL018J9s7vrYI63h76PC9E0M92m3Q69kAbkls/2MqAfmthgX49zPncBuBs5hJlNKABe64TGrSa4D+6H+J6RNKR5nswNcZ05Z8rnQ3kKHYNZOmEWoYTo7zYYYBNQ+97ZhoFa1egShLY8zeq5PJA1sZ8D7tr2QGR12G0u32GdXTa7ILRN9oUnquQQRGXeUkbBIamEfQ8tdvEcx73jOLZ+2YWFhYUFff4BKUJAy+hbWDMAAAAASUVORK5CYII=" alt="" id="icon">
+			<nav>
+				<i class="fa-solid fa-sun" id="icon"></i>
+				
 			</nav>
 			Shop Registration Form
 			<p>(All Fields are Mandatory)</p>
+			
 		</header>
-		<form onsubmit="return Validate()" action="Validation" method="post"
+
+		
+		<form  action="#" method="post"
 			class="form">
 
-			<div class="column">
+			<div class="column" >
 				<div class="input-box">
 					<label for="firstName">First Name</label> <input type="text"
-						id="firstName" name="firstName" placeholder="Enter First Name"
+						id="firstName" name="firstName" placeholder="Enter First Name" class="ajay"
 						required />
 				</div>
 				<div class="input-box">
 					<label>Last Name</label> <input type="text" id="lastName"
-						name="lastName" placeholder="Enter Last Name" required />
+						name="lastName" placeholder="Enter Last Name" class="ajay" required />
 				</div>
 			</div>
 
 			<div class="input-box">
-				<label>Shop Name</label> <input type="text" id="shopName"
+				<label>Shop Name</label> <input type="text" id="shopName" class="ajay"
 					name="shopName" placeholder="Enter Shop Name" required />
 			</div>
+
 			<div class="input-box">
-				<label>Email Address</label> <input type="text" name="emailAddress"
+				<label>Email Address</label> <input type="text" class="ajay" name="emailAddress"
 					id="emailAddress" placeholder="Enter email address" required />
 			</div>
 
 			<div class="column">
 
 				<div class="input-box">
-					<label>Phone Number</label> <input type="text" name="phoneNumber"
+					<label>Phone Number</label> <input type="number" class="ajay" name="phoneNumber"
 						id="phoneNumber" placeholder="Enter phone number" required />
 				</div>
-
-				
 
 			</div>
 
@@ -84,7 +88,7 @@
 				<div class="column">
 					<div class="select-box">
 						<select name="countryName" required>
-							<option>Country</option>
+							<option hidden>Country</option>
 							<option>India</option>
 						</select>
 					</div>
@@ -106,42 +110,65 @@
 
 			<div class="input-box">
 				<label>Confirm Password</label> <input type="password"
-					id="confirmPassword" name="confirmPassword"
+					id="password" name="confirmPassword"
 					placeholder="Confirm Your Password" required />
 			</div>
-				<input id="button" type="submit" value="Submit">
+			<input class="button" type="submit" value="Submit">
 		</form>
+
 	</section>
 
 
-  <script>
-  
-  var icon = document.getElementById("icon");
-	icon.onclick = function(){
-		document.body.classList.toggle("dark-theme");
-		if(document.body.classList.contains("dark-theme"))
-		icon.src = "data:image/jpeg;base64,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" ;
-		else	
-			icon.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALEAAACUCAMAAADrljhyAAAAY1BMVEX///8AAAD19fXw8PD8/Pz5+fmUlJTQ0NDAwMCFhYUxMTFPT0/n5+fq6uqpqaldXV0oKChjY2Pc3NxxcXE2NjYYGBh8fHydnZ24uLixsbHKyspra2tDQ0M9PT0iIiJISEgMDAzenvSVAAAEkUlEQVR4nO2cbbOqIBCAwze0TA3NSiv7/7/ynrJOJ1NhF3SZuT7fm55xFliWhdVqYWFhYWFh4b/Ad9xtzMPjKXSpVRTY8vAU1QVraWJqHwkiidKXbEtErTSGiM7ZjXWoPWqtAZw4yLqyDxJqs37cU/n1cZ9B4VO79eEnab+urcLJfsiXBRYGsXu8DPqyA7VdD2E97GvjxOZE1xHh3KH2+6IaCQjGdtYt0O5hzJetBbVgFzEWwT8cqQW7VP0r3DsmqAU7eMm4L1tvqRU/cQKJMDtRK3YoZcKpZfPEYBZh6Sd2dlLhhtrxA0caEoyF1JIfKAjvrUoxpbMEsyxlOykI721an2Ur3YPcoqnNPSsIWxUU8on4h6yi1nwjSyZaNvYEBVcJYpuyNidXErZod6cWE4xZE8axWkwwZs1srLA6t1CLvhCqwtYYS/ahb/bUpk/C4dpahwu1aouvHMVsQ+3aUikLs5TatUX9E1vyjbfqwpbE8XiF7RM75grlieIOteydcOBUxl5jwLhjVuQV8QZkbEGx4ggKChvyY8hMwWzYg7hK+9E39Ps8AZrbGLuSB3IIE7agXhFBjWvqsFCqA/2FvO4GFSYPixhunNGe+IMHHqNe9oDrxwPaHFl5E/0X0rMmWBr0hPQ8Dzy5UX9kZ7SHYpCMbk7eFnK9PnIy4xhpTNdfgTYuqOIiXiONWarbYsGvqFwbb8xyvcPeR+UshS/4GsZ6Oz7++OM1vH1Zx5gFeGHRHmIgjLGz21MZGxivI4ECbuxqGWN7Y6tXr2IBH3oebs37pcYon36bKy+Inzd6xqzh4L/8UzU7w4XVTs/HuCWwjlP+N1vEVPzBW+lvcsBndj7b8UuE8VHfmGXKvd5VJx3H3BtQP3ocJVEY9A7/2j7AB8EKs/vvpUgkqVHc1y+OaroGlt1GnKPjcHLEg94hjhHGbU372a/rU4+0X5VNf2cB7nBQpWEMRH0IhRDxHSF4Uo5kLrgLO4aGXof9+nwupC0bqIG3ijXXaQ0Qmdsd38AagqREpn7GA1kZ7L0zThUWBS6MV0bnNxA79EYRU940Ab5y7hpb9kDsNcoH8s75KdDphuEkxjrNiR6qiKzJWes0xURaD0WvBA1sWDCB7mX2+Sc43UNBd+6P3GhfPps7uTBwlV21/dgMV33hmedkE43iHqwjSw/NYvkTMV/SaeoMRbX1Xx9j7Q5z5cnmurncsTvz5rgavAeM6bWAY7Q7Q+U+oS4axz09zFAJKA2/yDB5frExfpld63xPzhSdZ0LvuGycadoy+HTKGbqkIlGerBgwkfBPYMBaqOmFJ9r2NZO2kAjFG5wA6ol7XlzT2fL018J9s7vrYI63h76PC9E0M92m3Q69kAbkls/2MqAfmthgX49zPncBuBs5hJlNKABe64TGrSa4D+6H+J6RNKR5nswNcZ05Z8rnQ3kKHYNZOmEWoYTo7zYYYBNQ+97ZhoFa1egShLY8zeq5PJA1sZ8D7tr2QGR12G0u32GdXTa7ILRN9oUnquQQRGXeUkbBIamEfQ8tdvEcx73jOLZ+2YWFhYUFff4BKUJAy+hbWDMAAAAASUVORK5CYII=";
-	}
-  
+<script>
+
+const inputFields = document.querySelectorAll(".ajay");
+
+const inputCheck = setInterval(() => {
+	inputFields.forEach((inputField) => {
+		if(inputField.value.length==0) {
+			inputField.style.border = "2px solid #4e4e4e";
+		}else if(inputField.value.length>=1 && inputField.value.length<6){
+			inputField.style.border = "2px solid red";
+		}else if(inputField.value.length>=6){
+			inputField.style.border = "2px solid green";
+		}
+	});
+}, 100);
+
+var icon = document.getElementById("icon");
+
+icon.onclick = function() {
+	document.body.classList.toggle("dark-theme");
+	if(document.body.classList.contains("dark-theme"))
+	icon.src = "https://www.flaticon.com/free-icon/moon_12805563" ;
+	else	
+		icon.src="/light_mode_FILL0_wght400_GRAD0_opsz24.png";
+}
+
   function Validate(){
-	
-  console.log("hello");
+	event.preventDefault();
+    console.log("hello");
 	var firstName = document.querySelector("#firstName").value;
     console.log(firstName);
+
 	var lastName = document.querySelector("#lastName").value;
     console.log(lastName);
+
 	var shopName = document.querySelector("#shopName").value;
     console.log(shopName);
+
 	var emailAddress = document.querySelector("#emailAddress").value;
     console.log(emailAddress);
+
 	var phoneNumber = document.querySelector("#phoneNumber").value;
     console.log(phoneNumber);
+
     var emailRegEx = /^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-z]{2,3}$/;
 	var phoneRegEx = /^[0-9]{10}$/;
+
     var password = document.querySelector("#password").value;
     var cnfpassword = document.querySelector("#confirmPassword").value;
+
 
 	if(firstName.trim()=="" || lastName.trim()==""){
 		swal("Oh-Oh!!!", "Name must be atleast 3 characters long!", "error");
@@ -151,21 +178,23 @@
 		swal("Oh-Oh!!!", "ShopName must be atleast 3 characters long!", "error");
 		return false;
 	}
-	else if(!emailRegEx.test(emailAddress)){
-    swal("Oh-Oh!!!", "Invalid Email", "error");
-    return false;
+	else if(emailRegEx.test(emailAddress)){
+		swal("Oh-Oh!!!", "Invalid Email", "error");
+		return false;
     }
-    else if(!phoneRegEx.test(phoneNumber)){
+    else if(phoneRegEx.test(phoneNumber)){
         swal("Oh-Oh!!!", "Invalid Mobile Number", "error");
         return false;
         }
-	 if(password!=cnfpassword){
-	        swal("Please Try Again", "Passwords Do Not Match!!!", "error");
-	        return false;
-	    }
+    else if(password!=cnfpassword){
+        swal("Please Try Again", "Passwords Do Not Match!!!", "error");
+        return false;
+    }
+
    return true; 
-	
 }
-  </script>
+
+</script>
+
 </body>
 </html>
