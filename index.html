@@ -131,9 +131,9 @@ const inputCheck = setInterval(() => {
 	inputFields.forEach((inputField) => {
 		if(inputField.value.length==0) {
 			inputField.style.border = "2px solid #4e4e4e";
-		}else if(inputField.value.length>=1 && inputField.value.length<6){
+		}else if(inputField.value.length>=1 && inputField.value.length<3){
 			inputField.style.border = "2px solid red";
-		}else if(inputField.value.length>=6){
+		}else if(inputField.value.length>=3){
 			inputField.style.border = "2px solid green";
 		}
 	});
